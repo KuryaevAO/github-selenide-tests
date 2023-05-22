@@ -1,7 +1,5 @@
 package com.kuryaevao.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,13 +8,7 @@ import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class GitHubSelenideSoftAssertionsTests {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.startMaximized = true;
-        Configuration.browserSize = "3840×2160";
-        Configuration.pageLoadTimeout = 600000;
-    }
+public class GitHubSelenideSoftAssertionsTests extends TestBase {
 
     @Test
     void softAssertionsShouldHaveJUnit5Examples() {
